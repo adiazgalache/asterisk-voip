@@ -7,7 +7,7 @@ The Asterisk Gateway Interface is an interface for adding functionality to Aster
 
 This python script receives one parameter (audio file) and returns the associated text through standard output.
 
-## Source
+## Source Code
 
 Import Librarys
 
@@ -17,7 +17,8 @@ Import Librarys
 import sys,os
 import requests
 import json
-
+```
+```python
 ## Watson Parameters
 # Credentials
 username = "XXXXX"
