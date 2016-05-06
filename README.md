@@ -1,5 +1,12 @@
 # AGI Asterisk IBM Watson Service Speech to Text (python)
 
+
+## Introduction
+
+The Asterisk Gateway Interface is an interface for adding functionality to Asterisk with many different programming languages. In this case, we will integrate Asterisk with IBM Watson service to transcribe audio to text.
+
+This python script receives one parameter (audio file) and returns the associated text through standard output.
+
 ```python
 #!/usr/bin/python
 # Overall import
@@ -61,4 +68,4 @@ else:
 ## Asterisk AGI
 # Send Event
 send("SET VARIABLE SPEECH_TO_TEXT " + event)
-```python
+```
