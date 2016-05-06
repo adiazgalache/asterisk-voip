@@ -1,4 +1,4 @@
-# AGI Asterisk IBM Watson service Speech to Text
+# AGI Asterisk IBM Watson Service Speech to Text (python)
 
 ```python
 #!/usr/bin/python
