@@ -1,0 +1,121 @@
+<!doctype <!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>test</title>
+
+<style type="text/css">
+
+body.noscroll
+
+{
+
+    position: fixed;
+
+    overflow-x: hidden;
+
+    overflow-y: hidden;
+
+    width: 100%;
+
+}
+
+</style>
+
+<script type="text/javascript">
+
+  var imgUrl;
+
+  function fn()
+
+  {
+
+  document.compatMode=='CSS1Compat'
+
+  imgUrl = window.location.search.replace( "?", "" );
+
+  imgUrl = imgUrl.replace("img=","");
+
+  //window.alert(imgUrl);
+
+  var w = document.body.offsetWidth;
+
+  var h = document.documentElement.offsetHeight;
+
+  var h2 = document.body.offsetHeight;
+
+  var h3 = window.innerHeight;
+
+  if(h < h2) {
+
+  h = h2;
+
+  }
+
+  if(h3 != 'undefined' && h < h3) {
+
+  h = h3;
+
+  }
+
+  //window.alert(h3);
+
+  document.getElementById('myImage').src = imgUrl
+
+  document.getElementById('myImage').width = w
+
+  document.getElementById('myImage').height = h
+
+  }
+
+ 
+
+  window.onresize = function() {
+
+  var w = document.body.offsetWidth;
+
+  var h = document.documentElement.offsetHeight;
+
+  var h2 = document.body.offsetHeight;
+
+  var h3 = window.innerHeight;
+
+  if(h < h2) {
+
+  h = h2;
+
+  }
+
+  if(h3 != 'undefined' && h < h3) {
+
+  h = h3;
+
+  }
+
+  //window.alert(h3);
+
+  document.getElementById('myImage').src = imgUrl
+
+  document.getElementById('myImage').width = w
+
+  document.getElementById('myImage').height = h
+
+  }
+
+</script>
+
+</head>
+
+<body onload="fn()" class="noscroll">
+
+<img src='<%= request.getParameter("img") %>' id="myImage" alt="Click to open image in new window"/>
+
+</body>
+
+ 
+
+ 
+
+</html>
